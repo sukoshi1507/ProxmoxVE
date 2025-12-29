@@ -1,0 +1,10 @@
+{
+  "name": "netronome",
+  "categories": [
+    "network",
+    "monitoring"
+  ],
+  "interface_port": 7575,
+  "description": "Netronome est un outil moderne de test de vitesse réseau et de monitoring construit avec Go et React. Il offre des tests de vitesse multi-providers (Speedtest.net, iperf3, LibreSpeed), un monitoring continu de la perte de paquets, une surveillance système distribuée via agents légers, et des alertes automatisées.",
+  "logo": "https://raw.githubusercontent.com/autobrr/netronome/develop/.github/assets/netronome_dashboard.png"
+}
