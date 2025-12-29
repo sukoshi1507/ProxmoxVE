@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source <(curl -s https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(wget -qO - https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: Sukoshi1507
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
@@ -39,7 +39,7 @@ function update_script() {
     msg_ok "Netronome arrêté"
 
     msg_info "Mise à jour de Netronome"
-    RELEASE=$(curl -s https://api.github.com/repos/autobrr/netronome/releases/latest | grep "tag_name" | awk '{print substr($2, 3, length($2)-4)}')
+    RELEASE=$(wget -qO - https://api.github.com/repos/autobrr/netronome/releases/latest | grep "tag_name" | awk '{print substr($2, 3, length($2)-4)}')
     wget -q https://github.com/autobrr/netronome/releases/download/v${RELEASE}/netronome_${RELEASE}_linux_x86_64.tar.gz
     tar -xzf netronome_${RELEASE}_linux_x86_64.tar.gz -C /usr/local/bin
     rm netronome_${RELEASE}_linux_x86_64.tar.gz
